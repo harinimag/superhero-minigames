@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { ButtonHTMLAttributes } from 'react';
 
-export const Button = styled.button`
+export const Button = styled.button<ButtonHTMLAttributes<HTMLButtonElement>>`
   border: none;
   background: ${(props) => props.theme.colors.backgroundDark};
   outline: none;
@@ -12,4 +13,4 @@ export const Button = styled.button`
   text-decoration: none;
   user-select: none;
   cursor: pointer;
-`
+`;

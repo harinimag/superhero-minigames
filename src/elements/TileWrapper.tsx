@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export interface TileWrapperProps {
   readonly col: number
   readonly row: number
+  children?: React.ReactNode
 }
 
 export const TileWrapper = styled.div<TileWrapperProps>`

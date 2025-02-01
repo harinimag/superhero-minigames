@@ -1,8 +1,12 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { HTMLProps } from 'react';
 
-interface TileInnerWrapperProps {
-  readonly inplace?: boolean
-  readonly shadow?: boolean
+interface TileInnerWrapperProps extends HTMLProps<HTMLButtonElement> {  // Extend HTMLProps<HTMLButtonElement>
+  readonly inplace?: boolean;
+  readonly shadow?: boolean;
+  children?: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
 }
 
 export const TileInnerWrapper = styled.button<TileInnerWrapperProps>`
@@ -33,4 +37,4 @@ export const TileInnerWrapper = styled.button<TileInnerWrapperProps>`
   transition-delay: 0.2s;
   transition-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
   transition-property: background-color;
-`
+`;
